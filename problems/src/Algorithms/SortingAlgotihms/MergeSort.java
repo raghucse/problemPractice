@@ -2,11 +2,12 @@ package Algorithms.SortingAlgotihms;
 
 /**
  * Created by raghu on 12/20/2016.
+ * https://www.youtube.com/watch?v=EeQ8pwjQxTM
  */
 public class MergeSort {
 
     public static void main(String[] args) {
-        int a[] = {8,7,1,6,3,5,4,1,9,4};
+        int a[] = {7,8,9,6,3,5,4,1,9,4};
 
      new MergeSort().mergeSort(a, 0, a.length-1);
 
@@ -71,12 +72,12 @@ public class MergeSort {
             k++;
         }
         System.out.println(i+" "+j+" "+k);
-       while (j<= high)
+    /*   while (j<= high)
         {
             a[k] = temp[j];
             j++;
             k++;
-        }
+        }*/
     }
 
 }
