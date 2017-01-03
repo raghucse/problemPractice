@@ -5,6 +5,7 @@ import java.util.Stack;
 
 /**
  * Created by raghu on 12/28/2016.
+ * Given two nodes in a binary tree, write a funtion to find common ancestor
  */
 public class CommonAncestors {
     Boolean first = false;
@@ -60,13 +61,14 @@ public class CommonAncestors {
         }
 
         Stack<TreeNode> sLeft = commonAncestors(a, n.left);
-        Stack<TreeNode> sRight = commonAncestors(a, n.right);
-
         if(sLeft != null)
         {
             sLeft.push(n);
             return sLeft;
         }
+
+
+        Stack<TreeNode> sRight = commonAncestors(a, n.right);
 
         if(sRight != null)
         {

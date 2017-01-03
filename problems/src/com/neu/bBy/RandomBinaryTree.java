@@ -27,7 +27,7 @@ public class RandomBinaryTree {
         return getRandomNode(root, count);
     }
 
-    public int getRandomNode(RBNode curr, int count)
+    private int getRandomNode(RBNode curr, int count)
     {
         if(count == children(curr.left)) return curr.val;
         if(count < children(curr.left)) return  getRandomNode(curr.left,count);

@@ -13,7 +13,7 @@ class Node {
 }
 
 
-public class KthToLast {
+public class NthToLast {
     private int count = 0;
     public static void main(String[] args) {
         Node n = new Node(1);
@@ -31,7 +31,7 @@ public class KthToLast {
         n.next = new Node(7);
 
     //    new KthToLast().kthLast(temp, 1);
-        new KthToLast().kthLastOptimised(temp, 2);
+        new NthToLast().kthLastOptimised(temp, 2);
     }
 
     public void kthLast(Node n, int pos)
