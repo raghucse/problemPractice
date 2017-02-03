@@ -6,6 +6,7 @@ import java.util.*;
 
 /**
  * Created by raghu on 11/21/2016.
+ * Arrange given numbers to form the biggest number
  */
 public class LargestNumber {
     public static void main(String[] args) {
@@ -14,14 +15,21 @@ public class LargestNumber {
         a.add(89);
 
      //   System.out.println(numbers.toString());
+   /*
         Collections.sort(a, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 return (String.valueOf(o1)+String.valueOf(o2)).compareTo(String.valueOf(o2)+String.valueOf(o1));
             }
-        });
+        });*/
+
+
+        Collections.sort(a, (Integer o1, Integer o2) -> {return (String.valueOf(o1)+String.valueOf(o2)).compareTo(String.valueOf(o2)+String.valueOf(o1));} );
+
+
 
         StringBuilder s = new StringBuilder();
+
 
         Boolean isZero = true;
         for (int i=a.size()-1;i>=0;i--) {
