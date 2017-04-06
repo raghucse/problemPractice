@@ -3,24 +3,27 @@ package test;
 /**
  * Created by raghu on 1/27/2017.
  */
-class FinalResult {
-    public int first;
-    public int next;
-}
+//base cases
 
 
 class testtt {
 
-    public static void main(String[] args) {
-        String a = "746209249";
-        System.out.println(getLeastNumberDeletingDigits_2(a,5));
+    static class fclass {
+        public int first;
+        public int next;
     }
 
-    public static String getLeastNumberDeletingDigits_2(String number, int k) {
+    public static void main(String[] args) {
+        String a = "43597658";
+        System.out.println(improbabilityCalculator(a,2));
+    }
+
+
+    public static String improbabilityCalculator(String number, int k) {
         String leastNumber = number;
         int start = 0;
         while (k > 0 && leastNumber.length() > 0) {
-            FinalResult result = getNextDecreasing(leastNumber, start);
+            fclass result = getNextDecreasing(leastNumber, start);
             if (result.first >= 0) {
                 leastNumber = removeDigit(leastNumber, result.first);
             } else {
@@ -34,7 +37,7 @@ class testtt {
         return leastNumber;
     }
 
-    private static FinalResult getNextDecreasing(String number, int start) {
+    private static fclass getNextDecreasing(String number, int start) {
         int firstDecreasing = -1;
         int nextStart;
 
@@ -55,7 +58,7 @@ class testtt {
             nextStart = number.length();
         }
 
-        FinalResult result = new FinalResult();
+        fclass result = new fclass();
         result.first = firstDecreasing;
         result.next = nextStart;
 

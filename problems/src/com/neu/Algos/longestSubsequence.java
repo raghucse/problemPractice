@@ -9,6 +9,10 @@ import java.util.ArrayList;
 public class longestSubsequence {
     public static void main(String[] args) {
         int a[] = {-2,4,120,5,6,121,122,123,124,9};
+
+    }
+
+    public ArrayList<Integer> longestSubSequence(int a[]){
         ArrayList<ArrayList> longestSequence =  new ArrayList<>();
 
         for(int i = a.length-1 ; i >= 0 ;i-- ){
@@ -35,14 +39,14 @@ public class longestSubsequence {
             }
         }
 
-        ArrayList<Integer> loongest = longestSequence.get(0);
+        ArrayList<Integer> longest = longestSequence.get(0);
         for(ArrayList<Integer> ad : longestSequence){
-            if(loongest.size() < ad.size()){
-                loongest = ad;
+            if(longest.size() < ad.size()){
+                longest = ad;
             }
         }
 
-        System.out.println(loongest);
+        return longest;
     }
 
 
